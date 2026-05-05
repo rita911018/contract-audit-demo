@@ -26,25 +26,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .process-tab.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.1)}
 .process-tab .savings{font-size:10px;color:#34c759;display:block;font-weight:400;margin-top:2px}
 
-.phase-tabs{display:flex;gap:4px;margin-bottom:16px;background:#e8e8ed;border-radius:10px;padding:4px}
-.phase-tab{flex:1;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;transition:.2s;border:none;background:transparent;color:#666}
-.phase-tab.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.1)}
-.phase-tab .badge{display:inline-block;font-size:9px;padding:2px 5px;border-radius:6px;margin-left:4px;vertical-align:middle}
-.badge-ai{background:#007aff;color:#fff}
-.badge-human{background:#8e8e93;color:#fff}
-
-.flow{display:flex;align-items:flex-start;gap:0;margin-bottom:20px;background:#fff;border-radius:14px;padding:20px 16px;overflow-x:auto}
-.flow-step{text-align:center;min-width:100px;flex:1;position:relative;cursor:pointer;transition:.15s;padding:6px;border-radius:10px}
-.flow-step:hover{background:#f0f0f5}
-.flow-step .icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:20px}
-.icon-human{background:#f2f2f7}
-.icon-ai{background:#e3f0ff}
-.icon-upload{background:#e8f5e9}
-.flow-step .step-title{font-size:11px;font-weight:600;margin-bottom:2px}
-.flow-step .step-who{font-size:9px;color:#8e8e93}
-.flow-step .step-who.ai{color:#007aff}
-.flow-arrow{display:flex;align-items:center;justify-content:center;width:32px;min-width:32px;font-size:14px;color:#c7c7cc;padding-top:12px}
-
 .time-bar{background:#fff;border-radius:14px;padding:16px 24px;margin-bottom:16px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .time-bar .time-block{flex:1;min-width:180px;text-align:center}
 .time-bar .time-block .big{font-size:22px;font-weight:700}
@@ -53,19 +34,36 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .time-bar .time-block .desc{font-size:10px;color:#8e8e93;margin-top:2px}
 .time-bar .arrow-big{font-size:24px;color:#8e8e93}
 
-/* Agent entry - genspark style */
-.agent-bar{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:20px}
-.agent-bar .section-label{font-size:11px;color:#8e8e93;margin-bottom:10px;text-transform:uppercase}
-.agent-grid{display:flex;gap:12px;flex-wrap:wrap}
-.agent-card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 16px;border-radius:12px;cursor:pointer;transition:.15s;min-width:80px;border:2px solid transparent}
-.agent-card:hover{background:#f0f0f5}
+.phase-tabs{display:flex;gap:4px;margin-bottom:12px;background:#e8e8ed;border-radius:10px;padding:4px}
+.phase-tab{flex:1;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;transition:.2s;border:none;background:transparent;color:#666}
+.phase-tab.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.badge{display:inline-block;font-size:9px;padding:2px 5px;border-radius:6px;margin-left:4px;vertical-align:middle}
+.badge-ai{background:#007aff;color:#fff}
+.badge-human{background:#8e8e93;color:#fff}
+
+.flow{display:flex;align-items:flex-start;gap:0;margin-bottom:12px;background:#fff;border-radius:14px;padding:20px 16px;overflow-x:auto}
+.flow-step{text-align:center;min-width:100px;flex:1;position:relative;cursor:pointer;transition:.15s;padding:6px;border-radius:10px}
+.flow-step:hover{background:#f0f0f5}
+.flow-step .icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:20px}
+.icon-human{background:#f2f2f7}
+.icon-ai{background:#e3f0ff}
+.icon-upload{background:#e8f5e9}
+.icon-download{background:#fff3e0}
+.flow-step .step-title{font-size:11px;font-weight:600;margin-bottom:2px}
+.flow-step .step-who{font-size:9px;color:#8e8e93}
+.flow-step .step-who.ai{color:#007aff}
+.flow-arrow{display:flex;align-items:center;justify-content:center;width:32px;min-width:32px;font-size:14px;color:#c7c7cc;padding-top:12px}
+
+/* Genspark Agent Entry */
+.agent-entry{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;gap:16px}
+.agent-entry .label{font-size:11px;color:#8e8e93;white-space:nowrap}
+.agent-cards{display:flex;gap:10px;overflow-x:auto}
+.agent-card{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px;cursor:pointer;transition:.15s;border:2px solid transparent;background:#f8f9fa;white-space:nowrap}
+.agent-card:hover{border-color:#e0e0e0}
 .agent-card.active{border-color:#007aff;background:#e3f0ff}
-.agent-card .agent-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.agent-card .agent-name{font-size:11px;font-weight:500;text-align:center}
-.agent-card .agent-desc{font-size:9px;color:#8e8e93}
-.icon-purple{background:#e8d5f5}
-.icon-orange{background:#fff3e0}
-.icon-blue{background:#e3f0ff}
+.agent-card .agent-avatar{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
+.agent-card .agent-name{font-size:12px;font-weight:600}
+.agent-card .agent-role{font-size:9px;color:#8e8e93}
 
 .main-panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .main-panels.single{grid-template-columns:1fr}
@@ -86,29 +84,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .risk-ok{background:#e3f0ff;color:#007aff}
 .risk-na{background:#f2f2f7;color:#8e8e93}
 
-/* Feedback always visible */
-.fb-always{display:flex;flex-direction:column;gap:4px;margin-top:4px}
-.fb-row{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
-.fb-btn{border:1px solid #e0e0e0;background:#fff;padding:2px 7px;border-radius:6px;font-size:9px;cursor:pointer;transition:.15s;white-space:nowrap}
-.fb-btn:hover{border-color:#007aff;color:#007aff}
-.fb-textarea{width:100%;padding:5px;border:1px solid #e0e0e0;border-radius:6px;font-size:9px;font-family:inherit;resize:vertical;min-height:28px}
-.fb-submit{padding:3px 10px;background:#007aff;color:#fff;border:none;border-radius:6px;font-size:9px;cursor:pointer;align-self:flex-end}
-.eval-done{display:none}
-.eval-done.show{display:inline-flex;align-items:center;gap:4px;font-size:9px;background:#e8f5e9;color:#27ae60;padding:3px 8px;border-radius:6px}
+.feedback-cell{font-size:10px}
+.feedback-cell textarea{width:100%;padding:5px;border:1px solid #e0e0e0;border-radius:6px;font-size:9px;resize:vertical;font-family:inherit;margin-top:2px}
+.feedback-cell button{padding:3px 8px;background:#007aff;color:#fff;border:none;border-radius:5px;font-size:9px;cursor:pointer;margin-top:2px}
+.fb-submitted{font-size:9px;color:#27ae60;font-weight:600}
 
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:12px 24px;border-radius:10px;font-size:13px;display:none;z-index:999;animation:fadeUp .3s}
+.eval-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:12px 24px;border-radius:10px;font-size:13px;display:none;z-index:999;animation:fadeUp .3s}
 @keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
 .ledger-table{width:100%;border-collapse:collapse;font-size:11px}
 .ledger-table th,.ledger-table td{padding:7px;text-align:left;border-bottom:1px solid #f0f0f0}
 .ledger-table th{color:#8e8e93;font-weight:500;font-size:10px}
+.ledger-new{animation:highlight 2s ease}
+@keyframes highlight{0%{background:#e3f0ff}100%{background:transparent}}
 
-.comm-box{background:#f8f9fa;border-radius:10px;padding:14px;font-size:12px;line-height:1.7}
+.comm-box,.email-box{background:#f8f9fa;border-radius:10px;padding:14px;font-size:12px;line-height:1.7}
 .comm-msg{margin-bottom:7px;display:flex;gap:8px;align-items:flex-start}
 .comm-msg .avatar{width:24px;height:24px;border-radius:50%;background:#007aff;color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
 .comm-msg .avatar.gray{background:#8e8e93}
 .comm-msg .bubble{background:#fff;padding:7px 10px;border-radius:10px;max-width:85%}
-.email-box{background:#f8f9fa;border-radius:10px;padding:14px;font-size:12px}
 .email-header{color:#8e8e93;margin-bottom:8px}
 .diff{background:#fff3e0;padding:5px 10px;border-radius:6px;margin:5px 0;font-size:10px}
 
@@ -123,39 +117,33 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .bill-row .match{color:#27ae60}
 .bill-row .diff-bill{color:#c0392b}
 
-/* Workspace upload modal */
+/* Upload Modal - Workspace style */
 .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
 .modal-overlay.show{display:flex}
-.modal{background:#fff;border-radius:16px;width:380px;overflow:hidden}
-.modal-header{padding:14px 16px;background:#f8f9fa;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
-.modal-header .back{font-size:16px;cursor:pointer;color:#8e8e93}
-.modal-body{padding:16px;min-height:300px}
-.modal-body .section-label{font-size:10px;color:#8e8e93;margin:12px 0 8px}
-.modal-body .section-label:first-child{margin-top:0}
-.ws-tool-grid{display:flex;gap:8px;flex-wrap:wrap}
-.ws-tool-card{flex:1;min-width:90px;text-align:center;padding:12px 8px;border-radius:10px;background:#f8f9fa;cursor:pointer;transition:.15s;border:2px solid transparent}
-.ws-tool-card:hover{background:#e3f0ff;border-color:#007aff}
-.ws-tool-card.upload-card{background:#e8f5e9;border-color:#27ae60;position:relative}
-.ws-tool-card .ws-icon{font-size:24px;margin-bottom:4px}
-.ws-tool-card .ws-name{font-size:10px;font-weight:500}
-.ws-tool-card .ws-desc{font-size:8px;color:#8e8e93;margin-top:2px}
-.ws-tool-card .upload-badge{position:absolute;top:-6px;right:-6px;background:#27ae60;color:#fff;width:18px;height:18px;border-radius:50%;font-size:10px;display:flex;align-items:center;justify-content:center}
-.modal-footer{padding:10px 16px;background:#f8f9fa;border-top:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center}
-.modal-footer button{padding:6px 16px;border-radius:8px;border:none;cursor:pointer;font-size:12px}
-.btn-upload{background:#007aff;color:#fff}
-.btn-close{background:#f2f2f7;color:#666}
-.upload-progress{display:none;margin-top:12px}
-.upload-progress .bar{height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden}
-.upload-progress .fill{height:100%;background:#007aff;width:0;transition:width .8s}
-.upload-progress .txt{font-size:10px;color:#8e8e93;margin-top:4px}
+.modal-workspace{background:#fff;border-radius:20px;overflow:hidden;width:360px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal-workspace .ws-top{background:#007aff;color:#fff;padding:12px 16px;font-size:14px;font-weight:600;text-align:center}
+.modal-workspace .ws-body{background:#f5f5f7;padding:16px;min-height:280px}
+.modal-workspace .ws-card{background:#fff;border-radius:10px;padding:14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:.15s}
+.modal-workspace .ws-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.modal-workspace .ws-card-upload{border:2px dashed #007aff;background:#e3f0ff;justify-content:center;font-size:28px;padding:24px;transition:.3s}
+.modal-workspace .ws-card-upload.anim{background:#e8f5e9;border-color:#27ae60;animation:pulse .6s}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.modal-workspace .ws-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.modal-workspace .ws-label{font-size:12px;font-weight:500}
+.modal-workspace .ws-sub{font-size:9px;color:#8e8e93}
+.modal-workspace .ws-nav{display:flex;border-top:1px solid #e0e0e0;padding:8px 0;background:#fff}
+.modal-workspace .ws-nav-item{flex:1;text-align:center;font-size:9px;color:#8e8e93;padding:4px}
+.modal-workspace .ws-nav-item.active{color:#007aff}
+.modal-workspace .ws-nav-item .nav-icon{font-size:16px;display:block}
+.modal-workspace .ws-red-btn{width:40px;height:40px;border-radius:50%;background:#ff3b30;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;margin:-20px auto 0;position:relative;z-index:1}
+.modal-workspace .ws-progress{margin-top:8px;text-align:center;display:none}
+.modal-workspace .ws-progress .bar{height:4px;background:#e0e0e0;border-radius:2px;overflow:hidden;margin:6px 0}
+.modal-workspace .ws-progress .fill{height:100%;background:#007aff;border-radius:2px;width:0;transition:width 1s}
+.modal-workspace .ws-done{font-size:11px;color:#27ae60;text-align:center;margin-top:6px;display:none}
+.modal-close{text-align:center;margin-top:12px}
+.modal-close button{padding:8px 24px;border-radius:8px;border:none;cursor:pointer;font-size:13px;background:#f2f2f7;color:#666}
 
-@media(max-width:768px){
-  .main-panels{grid-template-columns:1fr}
-  .flow{flex-wrap:wrap;gap:8px}
-  .flow-arrow{display:none}
-  .time-bar{flex-direction:column;gap:8px}
-  .time-bar .arrow-big{transform:rotate(90deg)}
-}
+@media(max-width:768px){.main-panels{grid-template-columns:1fr}.flow{flex-wrap:wrap;gap:8px}.flow-arrow{display:none}.time-bar{flex-direction:column;gap:8px}.time-bar .arrow-big{transform:rotate(90deg)}}
 </style>
 </head>
 <body>
@@ -170,7 +158,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="hero">
   <h1>AI 合同审核 + 财务收票</h1>
-  <div class="sub">26 份/月 · 185 店 → 年底 310 店 · 月省 45.5h + 19.5h</div>
+  <div class="sub">26 份/月 · 185 店 → 年底 310 店 · 两流程并行</div>
   <div class="metrics">
     <div class="metric"><div class="val gold">26</div><div class="label">份/月 · 合同量</div></div>
     <div class="metric"><div class="val gold">185→310</div><div class="label">门店数</div></div>
@@ -181,10 +169,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="process-tabs" id="processTabs">
   <button class="process-tab active" data-process="contract">
-    审核合同<span class="savings">月省 45.5h</span>
+    审核合同<span class="savings" id="contractSavings"></span>
   </button>
   <button class="process-tab" data-process="finance">
-    财务收票付款<span class="savings">月省 19.5h</span>
+    财务收票付款<span class="savings" id="financeSavings"></span>
   </button>
 </div>
 
@@ -198,23 +186,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="flow" id="flow"></div>
 
-<div class="agent-bar" id="agentBar">
-  <div class="section-label">AI Tools · 智能体</div>
-  <div class="agent-grid">
+<!-- Genspark-style Agent Entry -->
+<div class="agent-entry" id="agentEntry">
+  <span class="label">智能体</span>
+  <div class="agent-cards">
     <div class="agent-card active" data-agent="contract" onclick="switchAgent('contract')">
-      <div class="agent-icon icon-blue">📋</div>
-      <div class="agent-name">合同审核助手</div>
-      <div class="agent-desc">19维审核 · Eval</div>
+      <div class="agent-avatar" style="background:#e3f0ff">📋</div>
+      <div><div class="agent-name">合同审核助手</div><div class="agent-role">审核 · 台账 · 对比</div></div>
     </div>
     <div class="agent-card" data-agent="finance" onclick="switchAgent('finance')">
-      <div class="agent-icon icon-orange">💳</div>
-      <div class="agent-name">财务收票助手</div>
-      <div class="agent-desc">账单比对 · 台账</div>
+      <div class="agent-avatar" style="background:#e8f5e9">💳</div>
+      <div><div class="agent-name">财务收票助手</div><div class="agent-role">比对账单 · 差异标记</div></div>
     </div>
-    <div class="agent-card" data-agent="xiaoa" onclick="switchAgent('xiaoa')">
-      <div class="agent-icon icon-purple">🤖</div>
-      <div class="agent-name">小A智能助手</div>
-      <div class="agent-desc">知识问答</div>
+    <div class="agent-card" onclick="toast('🧠 智能问答 — 开发中')">
+      <div class="agent-avatar" style="background:#fff3e0">🧠</div>
+      <div><div class="agent-name">小A智能助手</div><div class="agent-role">知识问答 · 日常咨询</div></div>
+    </div>
+    <div class="agent-card" onclick="toast('📊 数据分析 — 开发中')">
+      <div class="agent-avatar" style="background:#ffe5e5">📊</div>
+      <div><div class="agent-name">数据看板</div><div class="agent-role">合同分析 · 趋势报表</div></div>
     </div>
   </div>
 </div>
@@ -228,168 +218,190 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <!-- Upload Modal - Workspace style -->
 <div class="modal-overlay" id="uploadModal">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="back" onclick="closeModal()">‹</span>
-      <span>Amer Sports · 小A智能助手</span>
-    </div>
-    <div class="modal-body">
-      <div class="section-label">常用 · Frequent</div>
-      <div style="display:flex;align-items:center;gap:8px;padding:8px 0">
-        <div style="width:36px;height:36px;border-radius:10px;background:#e8d5f5;display:flex;align-items:center;justify-content:center;font-size:18px">🤖</div>
-        <div>
-          <div style="font-size:12px;font-weight:500">Smart Robot</div>
-          <div style="font-size:9px;color:#8e8e93">小A智能助手</div>
+  <div>
+    <div class="modal-workspace">
+      <div class="ws-top">小A智能助手</div>
+      <div class="ws-body">
+        <div class="ws-card" style="flex-direction:column;align-items:flex-start">
+          <span style="font-size:11px;color:#8e8e93">Frequent</span>
+          <div style="display:flex;gap:8px;margin-top:6px;width:100%">
+            <div style="background:#e3f0ff;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:6px;font-size:10px">🤖 智能助手</div>
+            <div style="background:#f2f2f7;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:6px;font-size:10px">📊 问卷调查</div>
+          </div>
         </div>
-      </div>
-
-      <div class="section-label">AI Tools</div>
-      <div class="ws-tool-grid">
-        <div class="ws-tool-card upload-card" onclick="simulateUpload()">
-          <div class="upload-badge">+</div>
-          <div class="ws-icon">📄</div>
-          <div class="ws-name">上传合同</div>
-          <div class="ws-desc">PDF / 扫描件</div>
+        <div class="ws-card ws-card-upload" id="wsUpload" onclick="simulateUpload2()">
+          📄<br><span style="font-size:12px;margin-top:4px">上传合同</span>
         </div>
-        <div class="ws-tool-card">
-          <div class="ws-icon">📋</div>
-          <div class="ws-name">合同审核</div>
-          <div class="ws-desc">19维风险报告</div>
+        <div class="ws-progress" id="wsProgress">
+          <span style="font-size:10px;color:#8e8e93">上传中...</span>
+          <div class="bar"><div class="fill" id="wsFill"></div></div>
         </div>
+        <div class="ws-done" id="wsDone">✅ 合同已上传 · AI审核中...</div>
       </div>
-
-      <div class="upload-progress" id="uploadProgress">
-        <div class="bar"><div class="fill" id="progressFill"></div></div>
-        <div class="txt" id="progressTxt">正在上传合同并启动AI审核...</div>
+      <div class="ws-nav">
+        <div class="ws-nav-item active"><span class="nav-icon">🏠</span>主页</div>
+        <div class="ws-nav-item"><span class="nav-icon">🧠</span>AI</div>
+        <div style="flex:1"></div>
+        <div class="ws-nav-item"><span class="nav-icon">📋</span>工具</div>
+        <div class="ws-nav-item"><span class="nav-icon">👤</span>我的</div>
       </div>
+      <div class="ws-red-btn">＋</div>
     </div>
-    <div class="modal-footer">
-      <button class="btn-close" onclick="closeModal()">关闭</button>
-    </div>
+    <div class="modal-close"><button onclick="closeModal2()">关闭</button></div>
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<div class="eval-toast" id="evalToast"></div>
 
 <script>
 // === STATE ===
 let currentProcess = 'contract';
 let currentPhase = 1;
+let uploadDone = false;
 let confirmedRisks = {};
 
+const timeData = {
+  contract:{ current:2.25, ai:0.5, monthly:26 },
+  finance:{ current:1.0, ai:0.25, monthly:26 }
+};
+function getTimeStr(td){
+  const c = td.current*td.monthly, a = td.ai*td.monthly, s = c-a;
+  return {curMonthly:c,aiMonthly:a,savedMonthly:s,savedYearly:s*12};
+}
 function renderTimeBar(){
-  const td = currentProcess==='contract' ? {cur:2.25,ai:0.5} : {cur:1.0,ai:0.25};
-  const curM = td.cur*26, aiM = td.ai*26, savedM = curM-aiM;
+  const td = timeData[currentProcess];
+  const t = getTimeStr(td);
   document.getElementById('timeBar').innerHTML = `
-    <div class="time-block">
-      <div class="desc">当前 · 单份耗时</div>
-      <div class="big red">${td.cur} 小时</div>
-      <div class="desc">月累计 ${curM.toFixed(1)}h</div>
-    </div>
+    <div class="time-block"><div class="desc">当前 · 单份耗时</div><div class="big red">${td.current} 小时</div><div class="desc">月累计 ${t.curMonthly.toFixed(1)}h · 年 ${(t.curMonthly*12).toFixed(0)}h</div></div>
     <div class="arrow-big">→</div>
-    <div class="time-block">
-      <div class="desc">AI 后 · 单份耗时</div>
-      <div class="big green">${td.ai} 小时</div>
-      <div class="desc">月累计 ${aiM.toFixed(1)}h</div>
-    </div>
+    <div class="time-block"><div class="desc">AI 后 · 单份耗时</div><div class="big green">${td.ai} 小时</div><div class="desc">月累计 ${t.aiMonthly.toFixed(1)}h</div></div>
     <div class="arrow-big">=</div>
-    <div class="time-block">
-      <div class="desc">月节省</div>
-      <div class="big green">${savedM.toFixed(1)} 小时</div>
-      <div class="desc">年节省 ¥${(savedM*12*120).toLocaleString()}</div>
-    </div>
-  `;
+    <div class="time-block"><div class="desc">月节省</div><div class="big green">${t.savedMonthly.toFixed(1)} 小时</div><div class="desc">年节省 ${t.savedYearly.toFixed(0)}h · ¥${(t.savedYearly*120).toLocaleString()}</div></div>`;
+}
+function renderSavingsLabels(){
+  const ct = getTimeStr(timeData.contract);
+  const ft = getTimeStr(timeData.finance);
+  document.getElementById('contractSavings').textContent = `月省 ${ct.savedMonthly.toFixed(1)}h`;
+  document.getElementById('financeSavings').textContent = `月省 ${ft.savedMonthly.toFixed(1)}h`;
 }
 
+// === AUDIT DATA ===
 const auditData = [
-  {id:1,cat:"法律/商业",point:"签约主体及品牌",result:"甲方：上海毅朗商业有限公司；乙方：亚玛芬商业（上海）有限公司；品牌：SALOMON。",src:"合同首部",opinion:"合规",risk:"ok"},
-  {id:2,cat:"商业",point:"合作模式",result:"联营合同（联合销售经营模式）。甲方提供场地+POS，乙方经营；甲方先收货款再结算。",src:"封面·第5条",opinion:"合规",risk:"ok"},
-  {id:3,cat:"期限",point:"合同期限",result:"租期3年，自交付日起算。免租期30天。起始日待定。",src:"Part 1",opinion:"中风险",risk:"mid"},
-  {id:4,cat:"财务",point:"租赁面积",result:"167㎡（约）。合同注明'以甲方最终核实为准'——单方调整风险。",src:"Part 1",opinion:"中风险",risk:"mid"},
-  {id:5,cat:"财务",point:"租金/提成 VS 报店文件",result:"Y1保底¥76,542/月（¥5,500/㎡/年），Y2 ¥80,717，Y3 ¥83,500；提成Y1-2:13%,Y3:14%。取保底与提成较高者——单向棘轮。",src:"Part 1",opinion:"高风险",risk:"high"},
-  {id:6,cat:"财务",point:"最低营业额承诺",result:"¥7,515,000/年（¥45,000/㎡/年）。连续12个月不达标甲方可单方终止。",src:"Part 1·第21条",opinion:"高风险",risk:"high"},
-  {id:7,cat:"财务/运营",point:"保证金与押金",result:"保证金¥295,590（3月保底+3月服务费）。解约即没收——无司法审查前置。",src:"Part 1·第6/15条",opinion:"高风险",risk:"high"},
-  {id:8,cat:"商业",point:"联营压货款",result:"联营模式适用，未明确最后一个月压款条款。",src:"（缺失）",opinion:"中风险",risk:"mid"},
-  {id:9,cat:"结算/运营",point:"账单出具日/付款周期/滞纳金",result:"次月第20个工作日结算——最长50+自然日占用。缺滞纳金条款。",src:"第5条",opinion:"中风险",risk:"mid"},
-  {id:10,cat:"财务",point:"货款结算及延期回款",result:"商场收银。甲方控制全部现金流，乙方零杠杆。延迟结算无罚则。",src:"第5条",opinion:"高风险",risk:"high"},
-  {id:11,cat:"终止后",point:"证照注销期约定",result:"未明确约定。标准要求≤45天。",src:"（缺失）",opinion:"低风险",risk:"low"},
-  {id:12,cat:"合规",point:"营业额审计报告约定",result:"未约定。标准：次年5月31日前。",src:"（缺失）",opinion:"低风险",risk:"low"},
-  {id:13,cat:"运营",point:"收银方式",result:"商场统一收银。甲方POS系统。",src:"第5/13条",opinion:"合规",risk:"ok"},
-  {id:14,cat:"财务",point:"收银手续费率",result:"POS¥700/台/月。手续费率未单独列。",src:"Part 1",opinion:"低风险",risk:"low"},
-  {id:15,cat:"商业",point:"会员卡折扣/积分",result:"需接受甲方礼品卡及会员卡规则。甲方单方调整。",src:"第8条·附件五六",opinion:"中风险",risk:"mid"},
-  {id:16,cat:"运营",point:"对账人联系方式/电子化",result:"未列明双方对账人姓名、电话、邮箱。",src:"（缺失）",opinion:"低风险",risk:"low"},
-  {id:17,cat:"期限",point:"续约选择",result:"到期前3-6个月书面申请。甲方无义务同意。无优先续租权。",src:"Part 3",opinion:"中风险",risk:"mid"},
-  {id:18,cat:"运营",point:"外仓合同",result:"不适用。",src:"N/A",opinion:"不适用",risk:"na"},
-  {id:19,cat:"兜底",point:"其他注意事项",result:"①甲方可单方调费②可单方搬迁店铺③合同注明'简化版'④签署日期空白",src:"第7.3/16.4条",opinion:"高风险",risk:"high"}
+  {id:1,cat:"法律/商业",point:"签约主体及品牌",result:"甲方：上海毅朗商业有限公司；乙方：亚玛芬商业（上海）有限公司；品牌：SALOMON。签约主体清晰。",src:"合同首部 · 甲乙方信息栏",risk:"ok"},
+  {id:2,cat:"商业",point:"合作模式",result:"联营合同（联合销售经营模式 简化版）。甲方提供场地+POS，乙方经营；甲方先收全部货款再结算。",src:"封面 · 第5条",risk:"ok"},
+  {id:3,cat:"期限",point:"合同期限",result:"租期3年，自交付日起算。免租期30天。起始日待定（交付日不确定）。",src:"Part 1 · 主要商业条款",risk:"mid"},
+  {id:4,cat:"财务",point:"租赁面积",result:"167㎡（约）。合同注明'以甲方最终核实为准'——面积单方调整风险。",src:"Part 1 · 场地",risk:"mid"},
+  {id:5,cat:"财务",point:"租金/提成及管费/推广费/税率 vs 报店文件",result:"Y1保底¥76,542/月（¥5,500/㎡/年），Y2 ¥80,717，Y3 ¥83,500；提成Y1-2: 13%, Y3: 14%。取保底与提成较高者——单向棘轮。",src:"Part 1 · 商业条款表",risk:"high"},
+  {id:6,cat:"财务",point:"最低营业额承诺",result:"¥7,515,000/年（¥45,000/㎡/年）。连续12个月不达标甲方可单方终止。",src:"Part 1 · 第21条",risk:"high"},
+  {id:7,cat:"财务/运营",point:"保证金与押金",result:"保证金¥295,590（3个月保底+3个月服务费）。解约即没收全部保证金——无司法审查前置。",src:"Part 1 · 第6/15条",risk:"high"},
+  {id:8,cat:"商业",point:"联营压货款",result:"联营模式适用，合同未明确最后一个月货款压款条款。",src:"（缺失）",risk:"mid"},
+  {id:9,cat:"结算/运营",point:"账单出具日/付款周期/滞纳金",result:"次月第20个工作日结算——最长50+自然日占用。缺滞纳金条款。",src:"第5条",risk:"mid"},
+  {id:10,cat:"财务",point:"货款结算及延期回款滞纳金",result:"商场收银。甲方控制全部现金流，乙方零杠杆。延迟结算无罚则。",src:"第5条",risk:"high"},
+  {id:11,cat:"终止后",point:"证照注销期约定",result:"未明确约定。标准要求≤45天。",src:"（缺失）",risk:"low"},
+  {id:12,cat:"合规",point:"营业额审计报告约定",result:"未约定。标准：次年5月31日前。",src:"（缺失）",risk:"low"},
+  {id:13,cat:"运营",point:"收银方式",result:"商场统一收银。甲方POS系统。",src:"第5/13条",risk:"ok"},
+  {id:14,cat:"财务",point:"收银手续费率",result:"POS¥700/台/月。手续费率未单独列。",src:"Part 1",risk:"low"},
+  {id:15,cat:"商业",point:"会员卡折扣/积分",result:"需接受甲方礼品卡及会员卡规则。手续/折扣由甲方单方调整。",src:"第8条 · 附件五、六",risk:"mid"},
+  {id:16,cat:"运营",point:"对账人联系方式/电子化",result:"未列明双方对账人姓名、电话、邮箱。",src:"（缺失）",risk:"low"},
+  {id:17,cat:"期限",point:"续约选择",result:"到期前3-6个月书面申请。甲方无义务同意。无优先续租权。",src:"Part 3 · 特别条款",risk:"mid"},
+  {id:18,cat:"运营",point:"外仓合同",result:"不适用。",src:"N/A",risk:"na"},
+  {id:19,cat:"兜底",point:"其他注意事项",result:"①甲方可单方调费②可单方搬迁店铺（3个月通知，不回复=默认同意）③合同注明'简化版'④签署日期空白",src:"第7.3/16.4条 · 封面",risk:"high"}
 ];
 const riskLabels = {high:"高风险",mid:"中风险",low:"低风险",ok:"合规",na:"不适用"};
 
+// === FLOW ===
 function renderFlow(){
   let steps;
   if(currentProcess === 'contract'){
+    const whoUpload = currentPhase===3 ? '小A·BD上传' : '小A·财务上传';
+    const whoComm = currentPhase===1 ? '财务⇄BD人工沟通' : 'AI比对+起草邮件';
+    const typeComm = currentPhase===1 ? 'human' : 'ai';
     steps = [
-      {icon:"📱",title:"上传合同",who:currentPhase===3?"BD上传至系统":"财务人工上传",type:"upload"},
-      {icon:"🔍",title:"AI审核",who:"AI出具审核报告",type:"ai"},
-      {icon:"💬",title:currentPhase===1?"人工沟通":"AI沟通",who:currentPhase===1?"财务⇄BD":"AI比对+起草邮件",type:currentPhase===1?"human":"ai"},
+      {icon:"📱",title:"上传合同",who:whoUpload,type:"upload",clickable:true},
+      {icon:"🔍",title:"AI审核",who:"AI出具报告",type:"ai"},
+      {icon:"💬",title:"沟通",who:whoComm,type:typeComm},
       {icon:"✅",title:"确认合同",who:"财务确认",type:"human"},
-      {icon:"📊",title:"输出台账",who:"AI输出台账",type:"ai"}
+      {icon:"📊",title:"输出台账",who:"AI输出台账",type:"download"}
     ];
   } else {
     steps = [
-      {icon:"🧾",title:"上传账单",who:"财务人工上传",type:"upload"},
-      {icon:"📋",title:"AI出具账单",who:"AI vs 合同条款比对",type:"ai"},
-      {icon:"🔍",title:"比对差异",who:"差异自动高亮",type:"ai"},
+      {icon:"📱",title:"上传账单",who:"小A·财务上传",type:"upload",clickable:true},
+      {icon:"📋",title:"AI比对",who:"AI解析账单 vs 合同条款",type:"ai"},
       {icon:"✅",title:"确认账单",who:"财务确认",type:"human"},
-      {icon:"📬",title:"收票",who:"系统收票",type:"ai"}
+      {icon:"🧾",title:"收票",who:"确认无误 · 收票入账",type:"human"}
     ];
   }
-  let html = '';
+  let h = '';
   steps.forEach((s,i) => {
-    html += `<div class="flow-step" ${i===0?`onclick="openUploadModal()" title="点击查看上传"`:''}>
+    h += `<div class="flow-step" ${s.clickable?`onclick="openUploadModal()" title="点击查看小A上传"`:''}>
       <div class="icon icon-${s.type}">${s.icon}</div>
       <div class="step-title">${s.title}</div>
       <div class="step-who ${s.type==='ai'?'ai':''}">${s.who}</div>
     </div>`;
-    if(i < steps.length-1) html += `<div class="flow-arrow">→</div>`;
+    if(i < steps.length-1) h += '<div class="flow-arrow">→</div>';
   });
-  document.getElementById('flow').innerHTML = html;
+  document.getElementById('flow').innerHTML = h;
+}
+
+// === AGENT ENTRY ===
+function switchAgent(agent){
+  document.querySelectorAll('.agent-card').forEach(c => c.classList.remove('active'));
+  document.querySelector(`[data-agent="${agent}"]`).classList.add('active');
+  currentProcess = agent;
+  document.querySelectorAll('.process-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`[data-process="${agent}"]`).classList.add('active');
+  document.querySelectorAll('.phase-tab').forEach((t,i) => t.classList.toggle('active', i===0));
+  currentPhase = 1;
+  uploadDone = false;
+  document.getElementById('phaseTabs').style.display = agent==='contract'?'flex':'none';
+  renderTimeBar();
+  renderAll();
 }
 
 // === UPLOAD MODAL ===
 function openUploadModal(){
   document.getElementById('uploadModal').classList.add('show');
-  document.getElementById('uploadProgress').style.display = 'none';
-  document.getElementById('progressFill').style.width = '0';
+  document.getElementById('wsUpload').classList.remove('anim');
+  document.getElementById('wsFill').style.width = '0';
+  document.getElementById('wsProgress').style.display = 'none';
+  document.getElementById('wsDone').style.display = 'none';
 }
-function closeModal(){
+function closeModal2(){
   document.getElementById('uploadModal').classList.remove('show');
 }
-function simulateUpload(){
-  document.getElementById('uploadProgress').style.display = 'block';
-  document.getElementById('progressFill').style.width = '100%';
-  document.getElementById('progressTxt').textContent = '✅ 合同已上传 · AI审核中...';
-  setTimeout(()=>{ toast('📋 AI审核完成！19维度审核报告已生成。'); }, 1000);
+function simulateUpload2(){
+  const u = document.getElementById('wsUpload');
+  if(u.classList.contains('anim')) return;
+  u.classList.add('anim');
+  document.getElementById('wsProgress').style.display = 'block';
+  document.getElementById('wsFill').style.width = '100%';
+  setTimeout(() => {
+    document.getElementById('wsDone').style.display = 'block';
+    uploadDone = true;
+    toast('📋 '+(currentProcess==='contract'?'合同已上传 · AI出具审核报告':'账单已上传 · AI比对合同')+'...');
+    renderRight();
+  }, 1100);
 }
 
-// === AUDIT REPORT ===
+// === AUDIT REPORT (always visible feedback) ===
 function renderAudit(){
-  const riskCounts = {high:0,mid:0,low:0,ok:0,na:0};
-  auditData.forEach(d => riskCounts[d.risk]++);
-  const applicable = 19 - riskCounts.na;
-  const rate = Math.round(riskCounts.ok/applicable*100);
-  const rating = riskCounts.high ? '高风险⚠️' : (rate>=70?'良好':'需关注');
+  const rc = {high:0,mid:0,low:0,ok:0,na:0};
+  auditData.forEach(d => rc[d.risk]++);
+  const applicable = 19 - rc.na;
+  const rate = Math.round(rc.ok/applicable*100);
+  const rating = rc.high ? '高风险⚠️' : (rate>=70?'良好':'需关注');
 
   document.getElementById('leftPanel').innerHTML = `
     <h3>📋 AI 审核报告 · 19维审核
-      <button class="dl-btn" onclick="toast('📥 审核报告PDF下载中...')">⬇ 下载报告</button>
+      ${uploadDone ? '<button class="dl-btn" onclick="toast(\'📥 审核报告 PDF 下载中...\')">⬇ 下载报告</button>' : ''}
     </h3>
     <div class="scorecard">
-      <div class="score-item"><div class="num" style="color:#007aff">${rate}%</div><div class="lbl">合规率 (${riskCounts.ok}/${applicable})</div></div>
-      <div class="score-item"><div class="num" style="color:#c0392b">${riskCounts.high}</div><div class="lbl">高风险项</div></div>
+      <div class="score-item"><div class="num" style="color:#007aff">${rate}%</div><div class="lbl">合规率 (${rc.ok}/${applicable})</div></div>
+      <div class="score-item"><div class="num" style="color:#c0392b">${rc.high}</div><div class="lbl">高风险项</div></div>
       <div class="score-item"><div class="num" style="color:#1d1d1f">${rating}</div><div class="lbl">综合评级</div></div>
     </div>
     <div class="scroll-body">
-      <table class="risk-table"><thead><tr><th>#</th><th>审核要点</th><th>提取结果</th><th>评级</th><th>✅ 怎么改 / ❌ 错在哪儿</th></tr></thead><tbody>
+      <table class="risk-table"><thead><tr><th>#</th><th>审核要点</th><th>提取结果</th><th>评级</th><th>反馈</th></tr></thead><tbody>
       ${auditData.map(d => {
         const fbId = `fb_${d.id}`;
         const confirmed = confirmedRisks[fbId];
@@ -398,16 +410,15 @@ function renderAudit(){
           <td><strong>${d.point}</strong><br><span style="font-size:9px;color:#8e8e93">${d.cat}</span></td>
           <td>${d.result}<br><span style="font-size:8px;color:#8e8e93;background:#f8f8f8;padding:1px 3px;border-radius:3px">原文: ${d.src}</span></td>
           <td><span class="risk-badge risk-${d.risk}">${riskLabels[d.risk]}</span></td>
-          <td>
-            <div class="fb-always" id="cell_${fbId}">
-              ${confirmed ? `<div class="eval-done show">✓ Eval #${Math.floor(Math.random()*900+100)} · 已入评估库</div>` : `
-              <textarea class="fb-textarea" placeholder="怎么改？（输入正确答案）" id="ta_correct_${d.id}"></textarea>
-              <textarea class="fb-textarea" placeholder="错在哪儿？（判错原因）" id="ta_reason_${d.id}"></textarea>
-              <div class="fb-row">
-                <button class="fb-btn" onclick="submitOK(${d.id})" style="color:#27ae60;border-color:#27ae60">✅ 对了</button>
-                <button class="fb-btn" onclick="submitWrong(${d.id})">❌ 错了 · 提交Eval</button>
-              </div>`}
+          <td class="feedback-cell">
+            ${confirmed ? `<span class="fb-submitted">✓ Eval #${Math.floor(Math.random()*900+100)} · 已入库</span>` : `
+            <div style="margin-bottom:3px">
+              <textarea placeholder="要怎么改？" id="ta_correct_${d.id}" rows="2"></textarea>
             </div>
+            <div style="margin-bottom:3px">
+              <textarea placeholder="错在哪儿？" id="ta_reason_${d.id}" rows="2"></textarea>
+            </div>
+            <button onclick="submitFeedback(${d.id})">提交</button>`}
           </td>
         </tr>`;
       }).join('')}
@@ -419,144 +430,77 @@ function renderAudit(){
 function renderRight(){
   const p = document.getElementById('rightPanel');
   if(currentProcess === 'finance'){
-    p.innerHTML = `<h3>📋 AI账单 vs 合同条款比对</h3>
+    p.innerHTML = `<h3>📊 账单 vs 合同比对</h3>
     <div class="scroll-body">
-    <div style="font-size:11px;margin-bottom:8px;color:#8e8e93">AI 从上传账单中提取字段，逐项与合同条款比对：</div>
+    <div style="font-size:12px;margin-bottom:10px"><strong>供应商:</strong> 上海毅朗商业 · <strong>门店:</strong> Salomon佛罗伦萨E3b</div>
+    ${uploadDone ? `
     <div class="bill-compare">
-      <div style="font-size:12px;margin-bottom:10px"><strong>供应商:</strong> 上海毅朗商业 · <strong>门店:</strong> Salomon佛罗伦萨E3b · <strong>月份:</strong> 2026年5月</div>
-      <div class="bill-row"><span>保底营收</span><span style="color:#8e8e93">合同: ¥76,542</span><span>账单: ¥76,542</span><span class="match">✓ 一致</span></div>
-      <div class="bill-row"><span>提成营收（13%×实收）</span><span style="color:#8e8e93">合同: ¥88,400</span><span>账单: ¥88,400</span><span class="match">✓ 一致</span></div>
-      <div class="bill-row"><span>综合服务费（¥90/㎡×167㎡）</span><span style="color:#8e8e93">合同: ¥15,030</span><span>账单: ¥15,030</span><span class="match">✓ 一致</span></div>
-      <div class="bill-row"><span>推广费（1.8%×实收）</span><span style="color:#8e8e93">合同: ¥11,016</span><span>账单: ¥12,240</span><span class="diff-bill">✗ 差异 ¥1,224</span></div>
-      <div class="bill-row"><span>POS使用费（2台×¥700）</span><span style="color:#8e8e93">合同: ¥1,400</span><span>账单: ¥1,400</span><span class="match">✓ 一致</span></div>
+      <div style="font-size:10px;color:#8e8e93;margin-bottom:10px">AI 从上传文件提取账单明细，与合同条款逐项比对：</div>
+      <div class="bill-row"><span>保底营收</span><span>上传: ¥76,542</span><span>合同: ¥76,542</span><span class="match">✓ 一致</span></div>
+      <div class="bill-row"><span>提成营收（13%×实收）</span><span>上传: ¥88,400</span><span>合同: ¥88,400</span><span class="match">✓ 一致</span></div>
+      <div class="bill-row"><span>综合服务费</span><span>上传: ¥15,030</span><span>合同: ¥15,030</span><span class="match">✓ 一致</span></div>
+      <div class="bill-row"><span>推广费（1.8%）</span><span>上传: ¥12,240</span><span>合同: ¥11,016</span><span class="diff-bill">✗ 差异 ¥1,224</span></div>
+      <div class="bill-row"><span>POS使用费（2台）</span><span>上传: ¥1,400</span><span>合同: ¥1,400</span><span class="match">✓ 一致</span></div>
     </div>
     <div style="margin-top:12px;padding:10px;background:#fff3e0;border-radius:8px;font-size:11px">
-      ⚠️ <strong>推广费差异 ¥1,224</strong> — 甲方账单按¥680,000实收×1.8%=¥12,240；合同条款基数应为扣除退货后¥612,000×1.8%=¥11,016。建议财务核对实收口径。
+      ⚠️ <strong>推广费差异 ¥1,224</strong> — 上传的账单按¥680,000实收×1.8%=¥12,240，合同约定基数应扣除退货（¥612,000×1.8%=¥11,016）。请财务确认。
     </div>
-    <div style="margin-top:14px"><h3>💳 台账</h3>
-    <table class="ledger-table">
-      <thead><tr><th>账单编号</th><th>供应商</th><th>门店</th><th>月份</th><th>金额</th><th>比对</th><th>状态</th></tr></thead>
-      <tbody>
-        <tr><td>INV-202605-FLO-SAL</td><td>上海毅朗商业</td><td>佛罗伦萨E3b</td><td>2026-05</td><td>¥193,612</td><td style="color:#e67e22">⚠ 1项差异</td><td>待确认</td></tr>
-      </tbody></table></div></div>`;
+    <div style="margin-top:12px;text-align:right">
+      <button style="padding:6px 16px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:11px;cursor:pointer" onclick="toast('🧾 账单已确认 · 收票入账')">✅ 确认无误 · 收票</button>
+    </div>
+    ` : `
+    <div style="text-align:center;color:#8e8e93;padding:40px;font-size:13px">
+      👆 请先点击"上传账单"<br><span style="font-size:11px">AI 会自动比对上传内容与合同条款</span>
+    </div>`}
+    </div>`;
     document.getElementById('mainPanels').className = 'main-panels single';
   } else {
     document.getElementById('mainPanels').className = 'main-panels';
     renderAudit();
-    if(currentPhase === 1){
-      p.innerHTML = `<h3>💬 财务 ⇄ BD 沟通记录</h3>
-      <div class="comm-box">
-        <div class="comm-msg"><div class="avatar">财</div><div class="bubble">BD，Salomon佛罗伦萨审核报告出了。第5条租金条款——提成率Y3涨到14%，最低营业额¥45,000/㎡/年比较激进。</div></div>
-        <div class="comm-msg"><div class="avatar gray">B</div><div class="bubble">收到。H1大盘数据怎样？如果客流达不到保底线，保证金没收+罚金近60万。</div></div>
-        <div class="comm-msg"><div class="avatar">财</div><div class="bubble">我让AI算三版预测下午给你。无限极荟会员卡手续费1.2%，这条能不能参照？</div></div>
-        <div class="comm-msg"><div class="avatar gray">B</div><div class="bubble">OK，保证金条款至少要加'经双方协商'缓冲。我先约甲方时间。</div></div>
-      </div>
-      <div style="margin-top:12px;text-align:right">
-        <button style="padding:6px 14px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:11px;cursor:pointer" onclick="toast('✅ 合同已确认 · AI输出台账')">确认合同 · 输出台账</button>
-      </div>`;
-    } else if(currentPhase === 2){
-      p.innerHTML = `<h3>📧 AI 自动草拟 · BD沟通邮件</h3>
-      <div class="email-box">
-        <div class="email-header"><strong>To:</strong> BD团队 · SALOMON渠道<br><strong>主题:</strong> 佛罗伦萨小镇续约 · AI审核差异报告</div>
-        <p style="font-size:12px">BD 你好，</p>
-        <p style="font-size:12px">Salomon佛罗伦萨续约合同AI审核完成。与<strong>无限极荟基准合同</strong>的主要差异：</p>
-        <div class="diff">⚠️ 提成率：佛罗伦萨Y3涨至14%，无限极荟12.5%</div>
-        <div class="diff">⚠️ 最低营业额：¥45,000/㎡/年，无限极荟¥38,000</div>
-        <div class="diff">⚠️ 保证金：没收条款无司法审查前置——无限极荟含缓冲</div>
-        <div class="diff">✅ 综合服务费：¥90/㎡，一致</div>
-        <p style="font-size:12px">建议优先谈判：提成率、最低营业额、保证金没收条款。历史谈判纪要已附。</p>
-        <p style="color:#8e8e93;font-size:9px">AI审核助手自动生成 · 请确认后发送</p>
-      </div>
-      <div style="margin-top:12px;text-align:right">
-        <button style="padding:6px 14px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:11px;cursor:pointer" onclick="toast('✅ 合同已确认 · AI输出台账')">确认合同 · 输出台账</button>
-      </div>`;
-    } else {
-      p.innerHTML = `<h3>📊 台账输出 <button class="dl-btn" onclick="toast('📥 台账Excel下载中...')">⬇ 导出台账</button></h3>
-      <table class="ledger-table">
-        <thead><tr><th>合同编号</th><th>乙方</th><th>品牌</th><th>店铺</th><th>保底月租</th><th>提成率</th><th>审核状态</th></tr></thead>
-        <tbody>
-          <tr><td>AMER-SH-2024-033</td><td>亚玛芬商业</td><td>SALOMON</td><td>佛罗伦萨E3b</td><td>¥76,542</td><td>13-14%</td><td style="color:#c0392b">⚠ 5项高风险</td></tr>
-        </tbody></table>
-        <div style="margin-top:16px"><h3>💳 账单比对</h3>
-        <div class="bill-compare">
-          <div class="bill-row"><span>保底营收</span><span>¥76,542</span><span>¥76,542</span><span class="match">✓</span></div>
-          <div class="bill-row"><span>提成营收</span><span>¥88,400</span><span>¥88,400</span><span class="match">✓</span></div>
-          <div class="bill-row"><span>推广费（1.8%）</span><span>¥11,016</span><span>¥12,240</span><span class="diff-bill">✗ ¥1,224</span></div>
-          <div style="margin-top:6px;font-size:10px;color:#c0392b">⚠ 推广费基数异常。差异报告已生成，待财务确认。</div>
-        </div></div>`;
-    }
+    p.innerHTML = `<h3>📊 台账输出
+      <button class="dl-btn" onclick="toast('📥 台账 Excel 下载中...')">⬇ 导出台账</button>
+    </h3>
+    <table class="ledger-table">
+      <thead><tr><th>合同编号</th><th>乙方</th><th>品牌</th><th>店铺</th><th>保底月租</th><th>提成率</th><th>审核状态</th><th>时间</th></tr></thead>
+      <tbody>
+        <tr><td>AMER-SH-2024-033</td><td>亚玛芬商业</td><td>SALOMON</td><td>佛罗伦萨E3b</td><td>¥76,542</td><td>13-14%</td><td style="color:#c0392b">⚠ 5项高风险</td><td>2026-05-05</td></tr>
+        <tr class="ledger-new"><td>AMER-SH-2024-033</td><td>亚玛芬商业</td><td>SALOMON</td><td>佛罗伦萨E3b</td><td>¥76,542</td><td>13-14%</td><td style="color:#e67e22">已标记 · 待BD谈判</td><td>2026-05-05</td></tr>
+      </tbody></table>`;
   }
 }
 
-// === FEEDBACK: always visible textareas ===
-function submitOK(id){
-  confirmedRisks[`fb_${id}`] = true;
-  const evalId = Math.floor(Math.random()*900+100);
-  document.getElementById(`cell_fb_${id}`).innerHTML = `<div class="eval-done show">✓ Eval #${evalId} · 正例 · 已入评估库</div>`;
-  toast(`✅ Eval #${evalId} · 正例`);
-}
-function submitWrong(id){
+// === FEEDBACK ===
+function submitFeedback(id){
   const correct = document.getElementById(`ta_correct_${id}`).value.trim();
   const reason = document.getElementById(`ta_reason_${id}`).value.trim();
-  if(!correct && !reason){ toast('请至少填写"怎么改"或"错在哪儿"'); return; }
+  if(!correct || !reason){ toast('请填写"要怎么改"和"错在哪儿"'); return; }
   confirmedRisks[`fb_${id}`] = true;
-  const evalId = Math.floor(Math.random()*900+100);
-  document.getElementById(`cell_fb_${id}`).innerHTML = `<div class="eval-done show">✓ Eval #${evalId} · 已入评估库</div>`;
-  toast(`✅ Eval #${evalId}<br>期望=${(correct||'(未填)').slice(0,30)}…<br>原因=${(reason||'(未填)').slice(0,30)}…`);
+  renderAudit();
+  toast(`✅ Eval #${Math.floor(Math.random()*900+100)} · 期望=${correct.slice(0,20)}… · 原因已记录`);
 }
 
+// === TABS ===
+document.getElementById('processTabs').addEventListener('click', e => {
+  const tab = e.target.closest('.process-tab');
+  if(!tab) return;
+  switchAgent(tab.dataset.process);
+});
+document.getElementById('phaseTabs').addEventListener('click', e => {
+  const tab = e.target.closest('.phase-tab');
+  if(!tab || currentProcess!=='contract') return;
+  currentPhase = parseInt(tab.dataset.phase);
+  document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  uploadDone = false;
+  renderAll();
+});
+
 function toast(msg){
-  const t = document.getElementById('toast');
+  const t = document.getElementById('evalToast');
   t.innerHTML = msg;
   t.style.display = 'block';
   setTimeout(()=>{t.style.display='none'},3000);
 }
-
-// === AGENT SWITCH ===
-function switchAgent(agent){
-  document.querySelectorAll('.agent-card').forEach(c => c.classList.remove('active'));
-  document.querySelector(`.agent-card[data-agent="${agent}"]`).classList.add('active');
-  if(agent === 'contract'){
-    currentProcess = 'contract'; currentPhase = 1;
-    document.getElementById('phaseTabs').style.display = 'flex';
-    document.querySelectorAll('.phase-tab').forEach((t,i) => t.classList.toggle('active', i===0));
-  } else if(agent === 'finance'){
-    currentProcess = 'finance';
-    document.getElementById('phaseTabs').style.display = 'none';
-  } else {
-    toast('🤖 小A智能助手 · 知识问答模式');
-    return;
-  }
-  document.querySelectorAll('.process-tab').forEach(t => t.classList.remove('active'));
-  document.querySelector(`.process-tab[data-process="${currentProcess}"]`).classList.add('active');
-  renderTimeBar();
-  renderAll();
-}
-
-// === TAB HANDLERS ===
-document.getElementById('processTabs').addEventListener('click', e => {
-  const tab = e.target.closest('.process-tab');
-  if(!tab) return;
-  currentProcess = tab.dataset.process;
-  document.querySelectorAll('.process-tab').forEach(t => t.classList.remove('active'));
-  tab.classList.add('active');
-  currentPhase = 1;
-  document.querySelectorAll('.phase-tab').forEach((t,i) => t.classList.toggle('active', i===0));
-  document.querySelectorAll('.agent-card').forEach(c => c.classList.remove('active'));
-  document.querySelector(`.agent-card[data-agent="${currentProcess}"]`).classList.add('active');
-  document.getElementById('phaseTabs').style.display = currentProcess==='contract' ? 'flex' : 'none';
-  renderTimeBar();
-  renderAll();
-});
-
-document.getElementById('phaseTabs').addEventListener('click', e => {
-  const tab = e.target.closest('.phase-tab');
-  if(!tab || currentProcess !== 'contract') return;
-  currentPhase = parseInt(tab.dataset.phase);
-  document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active'));
-  tab.classList.add('active');
-  renderAll();
-});
 
 function renderAll(){
   renderFlow();
@@ -568,6 +512,7 @@ function renderAll(){
 
 // === INIT ===
 renderTimeBar();
+renderSavingsLabels();
 renderAll();
 </script>
 </body>
